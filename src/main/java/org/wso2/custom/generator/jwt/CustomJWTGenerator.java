@@ -43,9 +43,12 @@ public class CustomJWTGenerator extends JWTGenerator {
     public Map<String, String> populateCustomClaims(TokenValidationContext validationContext) throws APIManagementException {
 
         Map<String, String> claims = super.populateCustomClaims(validationContext);
-        Map<String, String> nnClaims = new HashMap<String, String>();
-        nnClaims.put("usa", claims.get("http://wso2.org/claims/usa"));
-
-        return nnClaims;
+        if (claims != null) {
+            Map<String, String> nnClaims = new HashMap<String, String>();
+            nnClaims.put("usa", claims.get("http://wso2.org/claims/usa"));
+            return nnClaims;
+        } else {
+            return null;
+        }
     }
 }
