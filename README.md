@@ -10,7 +10,7 @@ admin@carbon.super -> admin
 
 ### Build
 
-This repository contains the source code of the Custom JWT Token Generator that is used as sample in the following article:
+This repository contains the source code of the Custom JWT Token Generator with the above feature which is used as sample in the following article:
 
 https://docs.wso2.com/display/AM260/Passing+Enduser+Attributes+to+the+Backend+Using+JWT
 
